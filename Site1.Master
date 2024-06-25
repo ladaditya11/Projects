@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MasterPlan.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="bootsrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+    
+    <script src="bootsrap/js/popper.min.js"></script>
+    <script src="bootsrap/js/bootstrap.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                     <img src="imgs/food%20logo.png"  width="40"   height="40" />
+                     E-Canteen
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collpse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapsed navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                         <li class="nav-item active">
+                            <a class="nav-link" href="contact-us.aspx">Contact Us</a>
+                        </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" href="about-us.aspx">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="feedback.aspx">Feedback</a>
+                        </li>
+                    </ul>
+                     <ul class="navbar-nav">
+                         
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" href="Userlogin.aspx" >User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" href="usersignup.aspx">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" Visible="False" runat="server"  OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+ 
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7"  Visible="False" runat="server"  OnClick="LinkButton7_Click">Hello user</asp:LinkButton>
+ 
+                        </li>
+                         <li class="nav-item active">
+                             <asp:LinkButton class="nav-link" ID="LinkButton12" Visible="False" runat="server" OnClick="LinkButton12_Click"> Menu </asp:LinkButton>
+                         </li>
+                         <li>
+                             <asp:LinkButton class="nav-link" ID="LinkButton4"  Visible="False" runat="server" Onclick="LinkButton4_Click">Special Offers</asp:LinkButton>
+                         </li>
+                         <li>
+                             <asp:LinkButton  class="nav-link" ID="LinkButton5"  Visible="False" runat="server" OnClick="LinkButton5_click">Special Dishes</asp:LinkButton>
+                         </li>
+                    </ul>
+                </div>
+            </nav>
+      
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceholder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer>
+               <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" href="adminlogin.aspx" OnClick="LinkButton6_Click" >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton  class="footerlinks" ID="LinkButton8"  Visible="False" runat="server" href="adminchefmanagement.aspx" OnClick="LinkButton8_Click" >Admin ChefManagement</asp:LinkButton> 
+                               &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" Visible="False" runat="server" href="adminfoodinventory.aspx" OnClick="LinkButton9_Click">Admin FoodInventory</asp:LinkButton>
+                                   &nbsp;
+                            <asp:LinkButton  class="footerlinks" ID="LinkButton10"  Visible="False" runat="server" href="adminusermanagement.aspx" OnClick="LinkButton10_Click">Admin UserManagement</asp:LinkButton>
+                                &nbsp;
+                            <asp:LinkButton class="footerlinks"  ID="LinkButton11" Visible="False" runat="server" href="adminpaymentmanagement.aspx" OnClick="LinkButton11_Click">Admin PaymentManagement</asp:LinkButton>
+                        </p>
+ 
+                    </div>
+ 
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed.</p>
+                    </div>
+                </div>
+            </div>
+            </footer>
+        </div>
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
+ 
